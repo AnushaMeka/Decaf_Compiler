@@ -1,0 +1,16 @@
+I have successfully completed the project phase 1 that is Lexical Analysis with the help of Flex, a lexer generation tool.
+
+All the sample files generates the output to the standard output screen.
+
+COMMANDS TO BUILD AND RUN THE PROJECT DIRECTLY THROUGH COMMANDS ARE:
+
+flex scanner.l  // generates lex.yy.c file
+g++ -c -x c++ lex.yy.c   // compile lex.yy.c file with g++ compiler with option -x c++ as it is c file, generates .o file
+g++ -c main.cc errors.cc utility.cc   // compile all the .cc files, generates .o files
+g++ -o driver main.o errors.o utility.o lex.yy.o  // execute all the .o files
+./driver -d < samples/badbool.frag // run the project by passing the sample file which generates output to standard output screen
+
+RUNNING THE PROJECT WITH BUILD.SH AND EXEC.SH FILES ::
+>> ./build.sh   ----> compiles all the files and generates an executable file steps 1 to 4 will be covered in this file
+>> ./exec.sh <sample file name>     ------> for example [./exec.sh ../samples/badbool.frag] would generate output to standard output screen
+
