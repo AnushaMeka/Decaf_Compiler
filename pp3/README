@@ -1,0 +1,9 @@
+steps to run this phase
+
+cd workdir
+
+chmod 777 build.sh exec.sh
+
+./build.sh
+
+./exec.sh ../samples/bad1.decaf
